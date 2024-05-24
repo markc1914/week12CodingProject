@@ -37,76 +37,31 @@
   ],
   "results": [
     {
-      "id": "id586235ba0a443",
-      "datePlayed": "2024-04-28T13:43",
+      "id": "id8fd3564bdd294",
+      "datePlayed": "2024-01-02T15:33",
       "map": "Shipment",
-      "mode": "Team Deathmatch",
-      "kills": "50",
-      "deaths": "50",
-      "killDeathRatio": "1.00"
-    },
-    {
-      "id": "ida6b179c29336c",
-      "datePlayed": "2024-04-28T13:45",
-      "map": "Shipment",
-      "mode": "Team Deathmatch",
-      "kills": "81",
-      "deaths": "29",
-      "killDeathRatio": "2.79"
-    },
-    {
-      "id": "id8063ba5057552",
-      "datePlayed": "2023-12-11T17:50",
-      "map": "Shipment",
-      "mode": "Domination",
-      "kills": "28",
-      "deaths": "75",
-      "killDeathRatio": "0.37"
-    },
-    {
-      "id": "id0ef76e250c39",
-      "datePlayed": "2024-01-07T18:48",
-      "map": "Rust",
-      "mode": "Hardpoint",
-      "kills": "73",
-      "deaths": "50",
-      "killDeathRatio": "1.46"
-    },
-    {
-      "id": "id78ba95a36eccf",
-      "datePlayed": "2024-03-06T18:18",
-      "map": "Das Haus",
       "mode": "Hardpoint",
       "kills": "75",
-      "deaths": "20",
-      "killDeathRatio": "3.75"
+      "deaths": "25",
+      "killDeathRatio": "3.00"
     },
     {
-      "id": "idde0fb8d851dc",
-      "datePlayed": "2024-05-14T15:18",
-      "map": "Rust",
-      "mode": "Hardpoint",
-      "kills": "25",
-      "deaths": "96",
-      "killDeathRatio": "0.26"
-    },
-    {
-      "id": "iddda344f62c75c",
-      "datePlayed": "2024-05-02T15:19",
-      "map": "Rust",
-      "mode": "Kill Confirmed",
-      "kills": "50",
-      "deaths": "50",
-      "killDeathRatio": "1.00"
-    },
-    {
-      "id": "id36a7f26a161f4",
-      "datePlayed": "2024-05-01T15:20",
+      "id": "idfd57af9f4cca7",
+      "datePlayed": "2024-01-04T18:33",
       "map": "Stash House",
-      "mode": "Hardpoint",
-      "kills": "50",
-      "deaths": "62",
-      "killDeathRatio": "0.81"
+      "mode": "Domination",
+      "kills": "23",
+      "deaths": "37",
+      "killDeathRatio": "0.62"
+    },
+    {
+      "id": "ida07dc69c225df",
+      "datePlayed": "2024-02-06T07:34",
+      "map": "Das Haus",
+      "mode": "Team Deathmatch",
+      "kills": "71",
+      "deaths": "50",
+      "killDeathRatio": "1.42"
     }
   ]
 }
