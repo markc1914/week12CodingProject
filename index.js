@@ -213,14 +213,13 @@ $(document).ready(() => {
         let numDeaths = document.getElementById(numDeathsName).value;
         let gamePlayed = new Result(gamePlayedDate, gameMap, gameMode, numKills, numDeaths);
         appendGameToTable(gamePlayed);
-        allgamesPlayed.push(gamePlayed);
         document.getElementById(datePlayed).value = '';
         document.getElementById(mapName).value = '';
         document.getElementById(gameModeName).value = '';
         document.getElementById(numKillsName).value = 0;
         document.getElementById(numDeathsName).value = 0;
-        recalculateGlobalKDRatio(allgamesPlayed);
         service.addResult(gamePlayed);
+        service.getAllResults();
       }
     });
   }
@@ -263,11 +262,11 @@ $(document).ready(() => {
         let rowToDelete = document.getElementById(`${currentRow}`);
         rowToDelete.parentNode.removeChild(rowToDelete);
         allgamesPlayed.splice(currentRow, 1);
-        recalculateGlobalKDRatio(allgamesPlayed);
         service.deleteResult(currentRow).then(result =>
           {console.log(`Row ${gamePlayed.id} deleted`);}
         );
         rowId--;
+        service.getAllResults();
       };
       return button;
     }

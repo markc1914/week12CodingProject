@@ -64,15 +64,6 @@
       "killDeathRatio": "0.37"
     },
     {
-      "id": "idf63b1584778a1",
-      "datePlayed": "2024-03-11T04:51",
-      "map": "Rust",
-      "mode": "Kill Confirmed",
-      "kills": "29",
-      "deaths": "50",
-      "killDeathRatio": "0.58"
-    },
-    {
       "id": "id0ef76e250c39",
       "datePlayed": "2024-01-07T18:48",
       "map": "Rust",
@@ -80,6 +71,42 @@
       "kills": "73",
       "deaths": "50",
       "killDeathRatio": "1.46"
+    },
+    {
+      "id": "id78ba95a36eccf",
+      "datePlayed": "2024-03-06T18:18",
+      "map": "Das Haus",
+      "mode": "Hardpoint",
+      "kills": "75",
+      "deaths": "20",
+      "killDeathRatio": "3.75"
+    },
+    {
+      "id": "idde0fb8d851dc",
+      "datePlayed": "2024-05-14T15:18",
+      "map": "Rust",
+      "mode": "Hardpoint",
+      "kills": "25",
+      "deaths": "96",
+      "killDeathRatio": "0.26"
+    },
+    {
+      "id": "iddda344f62c75c",
+      "datePlayed": "2024-05-02T15:19",
+      "map": "Rust",
+      "mode": "Kill Confirmed",
+      "kills": "50",
+      "deaths": "50",
+      "killDeathRatio": "1.00"
+    },
+    {
+      "id": "id36a7f26a161f4",
+      "datePlayed": "2024-05-01T15:20",
+      "map": "Stash House",
+      "mode": "Hardpoint",
+      "kills": "50",
+      "deaths": "62",
+      "killDeathRatio": "0.81"
     }
   ]
 }
