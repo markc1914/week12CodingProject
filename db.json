@@ -37,31 +37,22 @@
   ],
   "results": [
     {
-      "id": "id8fd3564bdd294",
-      "datePlayed": "2024-01-02T15:33",
-      "map": "Shipment",
-      "mode": "Hardpoint",
-      "kills": "75",
-      "deaths": "25",
-      "killDeathRatio": "3.00"
-    },
-    {
-      "id": "idfd57af9f4cca7",
-      "datePlayed": "2024-01-04T18:33",
+      "id": "id988ff1cf7fb7",
+      "datePlayed": "2024-04-29T17:12",
       "map": "Stash House",
-      "mode": "Domination",
-      "kills": "23",
-      "deaths": "37",
-      "killDeathRatio": "0.62"
+      "mode": "Hardpoint",
+      "kills": "50",
+      "deaths": "50",
+      "killDeathRatio": "1.00"
     },
     {
-      "id": "ida07dc69c225df",
-      "datePlayed": "2024-02-06T07:34",
-      "map": "Das Haus",
+      "id": "idce753e19687fe",
+      "datePlayed": "2024-04-28T17:18",
+      "map": "Rust",
       "mode": "Team Deathmatch",
-      "kills": "71",
+      "kills": "50",
       "deaths": "50",
-      "killDeathRatio": "1.42"
+      "killDeathRatio": "1.00"
     }
   ]
 }

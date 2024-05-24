@@ -13,8 +13,6 @@ const globalKD = 'globalKD';
 const green = '#07541d';
 const red = '#820505';
 const baseurl = 'http://localhost:3000'
-const guidBaseURL = 'https://www.uuidtools.com/api/generate/v1';
-
 
 class TrackerService {
   constructor(url) {
@@ -34,6 +32,10 @@ class TrackerService {
     })
   }
 
+  /**
+   * populates game mode dropdown
+   * @returns a list of game modes
+   */
   allModeNames() {
     let url = `${this.url}/modes`;
     return $.ajax(url, {
@@ -43,7 +45,7 @@ class TrackerService {
     })
   }
   /**
-   * 
+   * populates the Game Result Table
    * @returns {[Result]} - game results   
    */
   getAllResults() {
@@ -72,8 +74,8 @@ class TrackerService {
   }
 
   /**
-   * 
-   * @param {String} gameId 
+   * Removes Game Result from the Data Store
+   * @param {String} gameId - the id of the game to be deleted
    * @returns 
    */
   deleteResult(gameId) {
@@ -93,10 +95,6 @@ class TrackerService {
 }
 
 const service = new TrackerService();
-
-
-
-let allgamesPlayed = [];
 
 class Result {
 
@@ -118,7 +116,6 @@ class Result {
     this.calculateKillDeathRatio();
   }
 
-  
    /**
    * properly calculate the KD ratio - we can't divide by 0
    */
@@ -133,10 +130,6 @@ class Result {
 
 }
 
-
-
-
-
 $(document).ready(() => {
   const $mapName = $(`#map-name`);
   const $modeName = $(`#game-mode`);
@@ -147,7 +140,7 @@ $(document).ready(() => {
       let option = `<option value="${map.map_name}">${map.map_name}</option>`;
       $mapName.append(option);
     }
-  })
+  });
 
   //populate dropdown for modes from DB
   service.allModeNames().then(modes => {
@@ -155,19 +148,19 @@ $(document).ready(() => {
       let option = `<option value="${mode.mode_name}">${mode.mode_name}</option>`;
       $modeName.append(option);
     }
-  })
+  });
 
+  //populate the table of Game Results
   service.getAllResults().then(results => {
     for (let result of results) {
       appendGameToTable(result);
     }
     recalculateGlobalKDRatio(results);
-
   })
 
 });
 
-  let rowId = 0; //track the rows we add using this
+  // all the other stuff you need like validation, and your event handlers.
 
   /**
    *
@@ -187,7 +180,6 @@ $(document).ready(() => {
       alert("Date must not be in the future");
       return false;
     }
-
     if (gameMap == '') {
       alert("Map must be chosen");
       return false;
@@ -199,35 +191,30 @@ $(document).ready(() => {
     return true;
   }
 
-
   //add event listener to our button so it adds to the row
   let addbutton = document.getElementById(btnAddName);
   if (addbutton != null) {
     document.getElementById(btnAddName).addEventListener('click', () => {
       let gamePlayedDate = document.getElementById(datePlayed).value;
       let gameMap = document.getElementById(mapName).value;
-      let gameMode = document.getElementById(gameModeName).value;
-        
+      let gameMode = document.getElementById(gameModeName).value;        
       if (validateForm(gamePlayedDate, gameMap, gameMode)) {
         let numKills = document.getElementById(numKillsName).value;
         let numDeaths = document.getElementById(numDeathsName).value;
         let gamePlayed = new Result(gamePlayedDate, gameMap, gameMode, numKills, numDeaths);
-        appendGameToTable(gamePlayed);
-        document.getElementById(datePlayed).value = '';
-        document.getElementById(mapName).value = '';
-        document.getElementById(gameModeName).value = '';
-        document.getElementById(numKillsName).value = 0;
-        document.getElementById(numDeathsName).value = 0;
         service.addResult(gamePlayed);
         service.getAllResults();
       }
     });
   }
 
-
+  /**
+   * Appends an instance of a Game Result to the Result table on screen
+   * @param {Result} gamePlayed - the game result we wish to append
+   */
   function appendGameToTable(gamePlayed) {
     let table = document.getElementById(tableName);
-    let row = table.insertRow(rowId + 1);
+    let row = table.insertRow(table.rows.length);
     row.setAttribute('id', `${gamePlayed.id}`);
     row.insertCell(0).innerHTML = gamePlayed.datePlayed;
     row.insertCell(1).innerHTML = gamePlayed.map;
@@ -243,7 +230,6 @@ $(document).ready(() => {
     }
     let actions = row.insertCell(6);
     actions.appendChild(createDeleteButton(gamePlayed.id));
-    rowId++;
   }
 
   const newLocal = 'button';
@@ -255,23 +241,20 @@ $(document).ready(() => {
   function createDeleteButton(currentRow) {
     if (currentRow != null && currentRow != 'undefined') {
       let button = document.createElement(newLocal);
+      button.setAttribute('type', 'button');
       button.className = 'btn btn-primary'; //add styling
       button.id = currentRow;
       button.innerHTML = 'Delete';
       button.onclick = () => {
-        let rowToDelete = document.getElementById(`${currentRow}`);
-        rowToDelete.parentNode.removeChild(rowToDelete);
-        allgamesPlayed.splice(currentRow, 1);
         service.deleteResult(currentRow).then(result =>
           {console.log(`Row ${gamePlayed.id} deleted`);}
         );
-        rowId--;
-        service.getAllResults();
       };
       return button;
     }
     return null;
   }
+
   /**
    * Calculates the global K/D Ratio
    * @param {[Result]} allgamesPlayed
@@ -297,4 +280,3 @@ $(document).ready(() => {
       kdElement.style.color = red;
     }
   }
-
