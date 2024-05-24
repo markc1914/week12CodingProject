@@ -1,0 +1,21 @@
+{
+  "name": "week10codingassignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r jsdom-global/register tests.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markc1914/week12codingproject.git"
+  }
+}

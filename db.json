@@ -1,0 +1,112 @@
+{
+  "maps": [
+    {
+      "map_name": "Shipment",
+      "id": "8370"
+    },
+    {
+      "map_name": "Rust",
+      "id": "a157"
+    },
+    {
+      "map_name": "Stash House",
+      "id": "acd4"
+    },
+    {
+      "map_name": "Das Haus",
+      "id": "1835"
+    }
+  ],
+  "modes": [
+    {
+      "mode_name": "Team Deathmatch",
+      "id": "4052"
+    },
+    {
+      "mode_name": "Hardpoint",
+      "id": "87cf"
+    },
+    {
+      "mode_name": "Kill Confirmed",
+      "id": "4785"
+    },
+    {
+      "mode_name": "Domination",
+      "id": "7940"
+    }
+  ],
+  "results": [
+    {
+      "id": "idc44d0c625a358",
+      "datePlayed": "2024-04-29T13:42",
+      "map": "Shipment",
+      "mode": "Team Deathmatch",
+      "kills": "82",
+      "deaths": "28",
+      "killDeathRatio": "2.93"
+    },
+    {
+      "id": "id586235ba0a443",
+      "datePlayed": "2024-04-28T13:43",
+      "map": "Shipment",
+      "mode": "Team Deathmatch",
+      "kills": "50",
+      "deaths": "50",
+      "killDeathRatio": "1.00"
+    },
+    {
+      "id": "ida6b179c29336c",
+      "datePlayed": "2024-04-28T13:45",
+      "map": "Shipment",
+      "mode": "Team Deathmatch",
+      "kills": "81",
+      "deaths": "29",
+      "killDeathRatio": "2.79"
+    },
+    {
+      "id": "idfb3a606ca4c4d",
+      "datePlayed": "2024-02-04T13:45",
+      "map": "Stash House",
+      "mode": "Kill Confirmed",
+      "kills": "75",
+      "deaths": "25",
+      "killDeathRatio": "3.00"
+    },
+    {
+      "id": "id8063ba5057552",
+      "datePlayed": "2023-12-11T17:50",
+      "map": "Shipment",
+      "mode": "Domination",
+      "kills": "28",
+      "deaths": "75",
+      "killDeathRatio": "0.37"
+    },
+    {
+      "id": "idf63b1584778a1",
+      "datePlayed": "2024-03-11T04:51",
+      "map": "Rust",
+      "mode": "Kill Confirmed",
+      "kills": "29",
+      "deaths": "50",
+      "killDeathRatio": "0.58"
+    },
+    {
+      "id": "idb423e7f45c253",
+      "datePlayed": "2024-03-03T00:49",
+      "map": "Das Haus",
+      "mode": "Kill Confirmed",
+      "kills": "31",
+      "deaths": "81",
+      "killDeathRatio": "0.38"
+    },
+    {
+      "id": "id0ef76e250c39",
+      "datePlayed": "2024-01-07T18:48",
+      "map": "Rust",
+      "mode": "Hardpoint",
+      "kills": "73",
+      "deaths": "50",
+      "killDeathRatio": "1.46"
+    }
+  ]
+}

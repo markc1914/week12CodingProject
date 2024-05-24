@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+  HTML File for Week 10 Assignment
+  Written by Mark Cornelius
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoD Performance Tracker</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Call of Duty Player Tracker</h5>
+      <div class="row">
+        <div class="col-sm"><!-- Date and time played-->
+          <div class="form-group">
+            <label for="date-played">Date & Time Played</label>
+            <input type="datetime-local" id="date-played" required>
+          </div>
+        </div>
+        <div class="col-sm"><!-- Map Name-->
+          <div class="form-group">
+            <label for="map-name">Map Name</label>
+            <select name="map-name" id="map-name" required>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="form-group">
+            <label for="game-mode">Game Mode</label>
+            <select name="game-mode" id="game-mode" required>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="form-group">
+            <label for="num-kills">Number of Kills</label>
+            <input type="range" id="num-kills" min="0" max="100" list="markers">
+            <datalist id="markers">
+              <option value="0"></option>
+              <option value="25"></option>
+              <option value="50"></option>
+              <option value="75"></option>
+              <option value="100"></option>
+            </datalist>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="form-group">
+            <label for="num-deaths">Number of Deaths</label>
+            <input type="range" id="num-deaths" min="0" max="100" list="markers2">
+            <datalist id="markers2">
+              <option value="0"></option>
+              <option value="25"></option>
+              <option value="50"></option>
+              <option value="75"></option>
+              <option value="100"></option>
+            </datalist>
+          </div>
+        </div>
+        <div class="col-sm">
+          <button id="add" class="btn btn-primary from-control">Add Entry</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table id="list" class="table table-light table-striped">
+    <tr>
+      <th>Date & Time Played</th>
+      <th>Map</th>
+      <th>Game Mode</th>
+      <th>Kills</th>
+      <th>Deaths</th>
+      <th>K/D Ratio</th>
+      <th>Delete</th>
+    </tr>
+  </table>
+  <label for="globalKD">Global KD ratio</label>
+  <input type="text" id="globalKD" value="0" readonly/>
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
